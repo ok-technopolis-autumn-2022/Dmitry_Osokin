@@ -1,0 +1,143 @@
+html {
+  display: flex;
+  margin-left: 40px;
+  
+  flex-direction: column;
+  width: 462px;
+  background: #F2F2F2;
+}
+
+.todo-app_header h1 {
+  display: flex;
+  margin-left: 37%;
+  margin-bottom: 20px;
+/*  justify-content: center; */
+  width: 245px;
+  height: 21px;
+  left: 393px;
+  top: 46.5px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 50px;
+  line-height: 21px;
+
+  letter-spacing: -2.5px;
+
+  color: #CCCCCC;
+}
+
+.todo-app_main {
+  display: flex;
+  background-color:#FFFFFF;
+  display: block;
+  border: 1px solid white; 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+/* search-bar margin-top is not working without border */
+}
+
+.todo-app_search_bar {
+  display: flex;
+  margin-top: 15px;
+  box-shadow: inset 0px -1px 0px #E6E6E6;
+}
+
+.todo-app_search_bar__hide_button {
+  display: flex;
+  background-image: url(https://i.postimg.cc/SxcS994m/select-all.png); 
+  margin-left: 9px;
+ 
+          
+  
+}
+
+.todo-app_search_bar__input_field {
+  display: flex;
+  margin-left: 10px;
+  
+  width: 272px;
+  height: 21px;
+  left: 281px;
+  top: 129.5px;
+ 
+  align-items: center;
+  letter-spacing: -0.6px;
+
+  color: #CCCCCC;
+}
+
+.todo-app_search_bar__input_field input{
+   
+
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 21px;
+  
+   border: 0;
+}
+
+.todo-app_search_bar__input_field input:focus{
+  
+   outline:none;
+}
+
+.todo-app_tasks {
+  margin-left: -7.5%;
+}
+
+
+.todo-app_task-item__task-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid white; 
+  box-shadow: inset 0px -1px 0px #E6E6E6;
+  margin-top: 15px;
+}
+
+.task-item_text {
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 21px;
+  letter-spacing: -0.6px;
+  color: #666666;
+}
+
+.task-item_status {
+/*  hididng checkbox */
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+}
+
+.todo-app_footer {
+  height: 43px;
+  box-shadow: inset 0px 1px 0px #E6E6E6;
+}
+
+.todo-app_footer__items_left {
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.35px;
+
+  color: #888888;
+}
+
+.todo-app_footer__filter {
+  color: #888888;
+}
+
+
+

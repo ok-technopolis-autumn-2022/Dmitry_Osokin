@@ -8,17 +8,17 @@
 <body>
 
 	<header class="todo-app_header">
-    	<h1>Todos</h1>
+    	<h1>todos</h1>
 	</header>
 	
 	<main class="todo-app_main">
 	<form id="data">
 
 		<section class="todo-app_search_bar">
-			<span class="todo-app_search_bar hide_button" aria-label="View or hide tasks">
+			<span class="todo-app_search_bar__hide_button" aria-label="View or hide tasks">
 				<button type="button"></button>
 			</span>
-			<span class="todo-app_search_bar input_field" aria-label="Input new tasks">
+			<span class="todo-app_search_bar__input_field" aria-label="Input new tasks">
 				<input 
 					type="text" 
 					placeholder="What needs to be done?"
@@ -28,8 +28,8 @@
 
 		
 		<section class="todo-app_tasks">
-			<ul class="todo-app_task-list tasks">
-				<li class="todo-app_task-item task-item">
+			<ul class="todo-app_task-list__tasks">
+				<li class="todo-app_task-item__task-item">
 					<div class="task-item_view">
 						<input
 							type="checkbox"
@@ -49,11 +49,11 @@
 					</div>
 				</li>
 				
-				<li class="todo-app_task-item task-item">
+				<li class="todo-app_task-item__task-item">
 					<div class="task-item_view">
 						<input
-							type="checkbox"
-							class="task-item_status"
+              class="task-item_status"
+							type="checkbox"							
 							aria-label="Completed task: CSS"
 						/>
 						<span class="task-item_text">CSS</span>
@@ -69,7 +69,7 @@
 					</div>
 				</li>
 				
-				<li class="todo-app_task-item task-item">
+				<li class="todo-app_task-item__task-item">
 					<div class="task-item_view">
 						<input
 							type="checkbox"
@@ -89,7 +89,7 @@
 					</div>
 				</li>
 				
-				<li class="todo-app_task-item task-item">
+				<li class="todo-app_task-item__task-item">
 					<div class="task-item_view">
 						<input
 							type="checkbox"
@@ -114,16 +114,16 @@
 	
 
 	<footer class="todo-app_footer">
-		<span class="todo-app_footer items_left" aria-label="Active tasks">
+		<span class="todo-app_footer__items_left" aria-label="Active tasks">
 			3 items left
 		</span>
 		
-		<span class="todo-app_footer filter" aria-label="Filter tasks">
-			<input type="radio" id="all" name = "filter" value="All">
+		<span class="todo-app_footer__filter" aria-label="Filter tasks">
+			<input type="radio" class="radio-filter" id="all" name = "filter" value="All">
 			<label for="all">All</label>
-			<input type="radio" id="active" name = "filter" value="Active">
+			<input type="radio" class="radio-filter" id="active" name = "filter" value="Active">
 			<label for="active">Active</label>
-			<input type="radio" id="completed" name = "filter" value="Completed">	
+			<input type="radio" class="radio-filter" id="completed" name = "filter" value="Completed">	
 			<label for="completed">Completed</label>
 		</span>
 		
