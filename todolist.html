@@ -28,17 +28,17 @@
 
 		
 		<section class="todo-app_tasks">
-			<ul class="todo-app_task-list__tasks">
-				<li class="todo-app_task-item__task-item">
+			<ul>
+				<li class="todo-app_task-item">
 					<div class="task-item_view">
 						<input
 							type="checkbox"
-							class="task-item_status"
+							class="task-item_checkbox"
 							aria-label="Completed task: HTML"
 						/>
-						<span class="task-item_text">HTML</span>
-						<button class="task-item_delete">Delete task</button>
 					</div>
+          <span class="task-item_text">HTML</span>
+						<button class="task-item_delete">Delete task</button>
 					<div class="task-item_edit" hidden="hidden">
 						<input
 							type="text"
@@ -49,16 +49,17 @@
 					</div>
 				</li>
 				
-				<li class="todo-app_task-item__task-item">
+				<li class="todo-app_task-item">
 					<div class="task-item_view">
 						<input
-              class="task-item_status"
+              class="task-item_checkbox"
 							type="checkbox"							
 							aria-label="Completed task: CSS"
 						/>
-						<span class="task-item_text">CSS</span>
-						<button class="task-item_delete">Delete task</button>
+						
 					</div>
+          <span class="task-item_text">CSS</span>
+						<button class="task-item_delete">Delete task</button>
 					<div class="task-item_edit" hidden="hidden">
 						<input
 							type="text"
@@ -69,16 +70,17 @@
 					</div>
 				</li>
 				
-				<li class="todo-app_task-item__task-item">
+				<li class="todo-app_task-item">
 					<div class="task-item_view">
 						<input
 							type="checkbox"
-							class="task-item_status"
+							class="task-item_checkbox"
 							aria-label="Completed task: JS"
 						/>
-						<span class="task-item_text">JS</span>
-						<button class="task-item_delete">Delete task</button>
+						
 					</div>
+          <span class="task-item_text">JS</span>
+						<button class="task-item_delete">Delete task</button>
 					<div class="task-item_edit" hidden="hidden">
 						<input
 							type="text"
@@ -89,16 +91,17 @@
 					</div>
 				</li>
 				
-				<li class="todo-app_task-item__task-item">
+				<li class="todo-app_task-item">
 					<div class="task-item_view">
 						<input
 							type="checkbox"
-							class="task-item_status"
+							class="task-item_checkbox"
 							aria-label="Completed task: JS tools"
 						/>
-						<span class="task-item_text">JS tools</span>
-						<button class="task-item_delete">Delete task</button>
+						
 					</div>
+          <span class="task-item_text">JS tools</span>
+						<button class="task-item_delete">Delete task</button>
 					<div class="task-item_edit" hidden="hidden">
 						<input
 							type="text"
@@ -120,18 +123,21 @@
 		
 		<span class="todo-app_footer__filter" aria-label="Filter tasks">
 			<input type="radio" class="radio-filter" id="all" name = "filter" value="All">
-			<label for="all">All</label>
+			<label for="all" class="radio-filter_label">All</label>
 			<input type="radio" class="radio-filter" id="active" name = "filter" value="Active">
-			<label for="active">Active</label>
+			<label for="active" class="radio-filter_label">Active</label>
 			<input type="radio" class="radio-filter" id="completed" name = "filter" value="Completed">	
-			<label for="completed">Completed</label>
+			<label for="completed" class="radio-filter_label">Completed</label>
 		</span>
 		
-		<span class="todo-app_footer clear_button" aria-label="Clear completed tasks">
+		<span class="todo-app_footer__clear_button" aria-label="Clear completed tasks">
 			<button type="button">Clear completed</button>	
 		</span>
 			
 	</footer>
+    
 	</main>
+   <div class="todo-app_box-one"></div>
+    <div class="todo-app_box-two"></div>
 </body>
 </html>
