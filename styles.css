@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -42,7 +44,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-color: #ffffff;
-  margin: 21px 10px;
+  margin: 21px 15px;
   padding: 10px 15px;
   border: 0;
   font-size: 0;
@@ -54,7 +56,6 @@ body {
   width: 100%;
   margin-right: 0;
 
-  font-family: "Roboto";
   font-style: italic;
   font-weight: 300;
   font-size: 24px;
@@ -106,6 +107,9 @@ body {
 }
 
 .task-item_text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
@@ -147,8 +151,6 @@ body {
 }
 
 .todo-app_footer__items_left {
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 300;
   font-size: 14px;
   line-height: 21px;
