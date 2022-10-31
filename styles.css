@@ -201,7 +201,7 @@ body {
 
 .todo-app_box-one {
   background-color: #ffffff;
-  max-width: 562px;
+  max-width: 552px;
   width: 98%;
   height: 5px;
   z-index: -1;
@@ -210,9 +210,9 @@ body {
 
 .todo-app_box-two {
   background-color: #ffffff;
-  max-width: 562px;
+  max-width: 542px;
   width: 96%;
-  height: 5px;
+  height: 4px;
   z-index: -2;
   box-shadow: 0px 2px 4px 0px #00000033;
 }
