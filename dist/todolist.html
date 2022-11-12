@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>To Do List</title>
+    <meta charset="utf-8">
+	<link href="/styles.b61e60ae.css" rel="stylesheet">
+  <script src="/styles.b61e60ae.js"></script></head>
+  <body>
+    <header class="todo-app_header">
+         
+      <h1>todos</h1>
+    </header>
+
+    <main class="todo-app_main">
+      <form id="data">
+        <section class="todo-app_search_bar">
+          
+          <button class="todo-app_search_bar__hide_button" aria-label="View or hide tasks"></button>
+          
+          <span class="todo-app_search_bar__input_field" aria-label="Input new tasks">
+            <input type="text" placeholder="What needs to be done?">
+          </span>
+        </section>
+
+        <section class="todo-app_tasks">
+          <ul>
+            <li class="todo-app_task-item">
+              <div class="task-item_view">
+                <input type="checkbox" class="task-item_checkbox" aria-label="Completed task: HTML">
+              </div>
+              <span class="task-item_text">HTML</span>
+              <button class="task-item_delete">Delete task</button>
+              <div class="task-item_edit" hidden="hidden">
+                <input type="text" class="task-item_input" value="HTML" aria-label="Edit task: HTML">
+              </div>
+            </li>
+
+            <li class="todo-app_task-item">
+              <div class="task-item_view">
+                <input class="task-item_checkbox" type="checkbox" aria-label="Completed task: CSS">
+              </div>
+              <span class="task-item_text">CSS</span>
+              <button class="task-item_delete">Delete task</button>
+              <div class="task-item_edit" hidden="hidden">
+                <input type="text" class="task-item_input" value="CSS" aria-label="Edit task: CSS">
+              </div>
+            </li>
+
+            <li class="todo-app_task-item">
+              <div class="task-item_view">
+                <input type="checkbox" class="task-item_checkbox" aria-label="Completed task: JS">
+              </div>
+              <span class="task-item_text">JS</span>
+              <button class="task-item_delete">Delete task</button>
+              <div class="task-item_edit" hidden="hidden">
+                <input type="text" class="task-item_input" value="JS" aria-label="Edit task: JS">
+              </div>
+            </li>
+
+            <li class="todo-app_task-item">
+              <div class="task-item_view">
+                <input type="checkbox" class="task-item_checkbox" aria-label="Completed task: JS tools">
+              </div>
+              <span class="task-item_text">JS tools</span>
+              <button class="task-item_delete">Delete task</button>
+              <div class="task-item_edit" hidden="hidden">
+                <input type="text" class="task-item_input" value="JS tools" aria-label="Edit task: JS tools">
+              </div>
+            </li>
+          </ul>
+        </section>
+      </form>
+
+      <footer class="todo-app_footer">
+        <span class="todo-app_footer__items_left" aria-label="Active tasks">
+          3 items left
+        </span>
+
+        <span class="todo-app_footer__filter" aria-label="Filter tasks">
+          <input type="radio" class="radio-filter" id="all" name="filter" value="All">
+          <label for="all" class="radio-filter_label">All</label>
+          <input type="radio" class="radio-filter" id="active" name="filter" value="Active">
+          <label for="active" class="radio-filter_label">Active</label>
+          <input type="radio" class="radio-filter" id="completed" name="filter" value="Completed">
+          <label for="completed" class="radio-filter_label">Completed</label>
+        </span>
+
+        <span class="todo-app_footer__clear_button" aria-label="Clear completed tasks">
+          <button type="button">Clear completed</button>
+        </span>
+      </footer>
+    </main>
+    <div class="todo-app_box-one"></div>
+    <div class="todo-app_box-two"></div>
+  </body>
+</html>
