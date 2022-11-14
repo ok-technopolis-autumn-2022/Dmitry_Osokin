@@ -1,0 +1,17 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "todolist.html",
+  "scripts": {
+    "start": "parcel todolist.html",
+    "build": "parcel build todolist.html",
+    "watch": "parcel todolist.html --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Osokin Dmitry",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.56.1"
+  }
+}
