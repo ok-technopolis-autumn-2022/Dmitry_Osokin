@@ -1,0 +1,4 @@
+
+class ButtonView extends AbstractView {
+    
+}
