@@ -17,6 +17,10 @@ body {
   background-color: $light-grey;
 }
 
+.done {
+  text-decoration-line: line-through;
+}
+
 .todo-app_header h1 {
   font-size: 100px;
   font-weight: 100;
@@ -35,10 +39,14 @@ body {
   overflow: hidden;
 }
 
+.todo-app_top {
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+}
+
 .todo-app_search_bar {
   display: flex;
   height: 66px;
-  border-bottom: 1px solid #e5e5e5;
 }
 
 .todo-app_search_bar__hide_button {
@@ -72,6 +80,7 @@ body {
 }
 
 .todo-app_tasks {
+  min-height: 296px;
   max-height: 296px;
   overflow-y: auto;
 }
