@@ -3,20 +3,22 @@ const ul = document.querySelector('.todo-app_task-list');
 const selectAllButton = document.querySelector('.todo-app_search_bar__hide_button');
 const itemsCounter = document.querySelector('.todo-app_footer__items_left');
 const clearButton = document.querySelector('.todo-app_footer__clear_button');
+document.querySelector('.task-item_checkbox');
 const allButton = document.getElementById('all');
 const activeButton = document.getElementById('active');
 const completedButton = document.getElementById('completed');
 
 let selected = false;
-let tasks = [];
+let tasksLi = [];
 
 function addTask(e) {
     e.preventDefault();
 
     if (this.description.value) {
         const task = createTask(this.description.value);
+        const li = createLi(task);
         ul.appendChild(createLi(task))
-        tasks.push(task);
+        tasksLi.push(li);
     }
 
     updateCounter();
@@ -27,13 +29,13 @@ function applyFilter() {
 
     ul.innerHTML = '';
 
-    for (let i = 0; i < tasks.length; i++) {
+    for (let i = 0; i < tasksLi.length; i++) {
         if (allButton.checked) {
-            ul.appendChild(createLi(tasks[i]));
-        } else if (activeButton.checked && !tasks[i].isCompleted) {
-            ul.appendChild(createLi(tasks[i]));
-        } else if (completedButton.checked && tasks[i].isCompleted) {
-            ul.appendChild((createLi(tasks[i])))
+            ul.appendChild(tasksLi[i]);
+        } else if (activeButton.checked && !tasksLi[i].childNodes[0].checked) {
+            ul.appendChild(tasksLi[i]);
+        } else if (completedButton.checked && tasksLi[i].childNodes[0].checked) {
+            ul.appendChild(tasksLi[i])
         }
     }
 
@@ -44,16 +46,57 @@ function selectAll() {
     const taskList = document.getElementsByTagName('li');
     if (selected) {
         for (let i = 0; i < taskList.length; i++) {
+            alert(taskList[i]);
             taskList[i].childNodes[0].checked = false;
-            tasks[i].isCompleted = false;
+            taskList[i].childNodes[2].classList.toggle('wip');
         }
     } else {
         for (let i = 0; i < taskList.length; i++) {
             taskList[i].childNodes[0].checked = true;
-            tasks[i].isCompleted = true;
+            taskList[i].childNodes[2].classList.toggle('done');
+
         }
     }
     selected = !selected;
+    updateCounter();
+}
+
+function taskAction(event) {
+    target = event.target;
+    const li = target.parentNode;
+
+    switch (target.className) {
+        case 'task-item_delete':
+            deleteTask(target, li);
+            break;
+        case 'task-item_checkbox':
+            checkTask(target, li);
+            break;
+    }
+
+}
+
+/**
+ *
+ * @param button: HTMLElement
+ * @param li: HTMLLiElement
+ */
+function deleteTask(button, li) {
+    button.removeEventListener('click', deleteTask);
+    tasksLi.splice(tasksLi.indexOf(li), 1);
+    li.remove();
+    updateCounter();
+}
+
+function checkTask(checkbox, li) {
+    if (checkbox.checked === false) {
+        li.childNodes[0].checked = true;
+        li.childNodes[2].classList.toggle('done');
+    } else {
+        li.childNodes[0].checked = false;
+        li.childNodes[2].classList.toggle('wip');
+    }
+
     updateCounter();
 }
 
@@ -112,13 +155,6 @@ function createLi(task) {
     button.textContent = 'delete';
     button.className = 'task-item_delete';
 
-    const deleteTask = () => {
-        button.removeEventListener('click', deleteTask);
-        li.remove();
-        updateCounter();
-    }
-    button.addEventListener('click', deleteTask);
-
     li.append(input, label, span, button);
     li.appendChild(itemView);
 
@@ -139,4 +175,4 @@ clearButton.addEventListener('click', clearCompleted);
 allButton.addEventListener('click', applyFilter);
 activeButton.addEventListener('click', applyFilter);
 completedButton.addEventListener('click', applyFilter);
-
+ul.addEventListener('click', taskAction);
